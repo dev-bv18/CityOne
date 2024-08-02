@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/CityOne/static/css/main.4cbea93d.css",
+    "main.js": "/CityOne/static/js/main.199932dd.js",
+    "static/js/453.2e0005d4.chunk.js": "/CityOne/static/js/453.2e0005d4.chunk.js",
+    "static/media/logo1.svg": "/CityOne/static/media/logo1.28965daf6b68698f707792407b6919d8.svg",
+    "index.html": "/CityOne/index.html",
+    "main.4cbea93d.css.map": "/CityOne/static/css/main.4cbea93d.css.map",
+    "main.199932dd.js.map": "/CityOne/static/js/main.199932dd.js.map",
+    "453.2e0005d4.chunk.js.map": "/CityOne/static/js/453.2e0005d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4cbea93d.css",
+    "static/js/main.199932dd.js"
+  ]
+}
