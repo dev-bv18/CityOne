@@ -59,6 +59,11 @@ a {
     color: white;
     font-size: 22px;
     font-weight: 500;
+    transition: all 0.4s ease-in-out;
+}
+.hero-latest-btn:hover{
+    background-color: darkred;
+    opacity: 60%;
 }
 
 .hero-right {
