@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+AR:wght@100..400&display=swap');
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.914), rgba(255, 255, 255, 0)), url('./rourkela_banner.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 180px;
+
+    line-height: 1.1;
+}
+
+.hero-left h2 {
+    color: rgb(192, 192, 192);
+    font-size: 70px; 
+  font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.hero-left p {
+    color: rgb(192, 247, 189);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hero-hand-icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-hand-icon img {
+    width: 105px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 310px;
+    height: 70px;
+    border-radius: 75px;
+    margin-top: 30px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-right img {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    opacity: 100%;
+    box-shadow: 2px 2px 20px 2px rgb(0, 0, 0);
+    animation: spin 15s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

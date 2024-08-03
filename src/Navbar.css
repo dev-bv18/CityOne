@@ -4,7 +4,7 @@
     justify-content: space-between;
     padding: 0 20px;
     color: white;
-    background-color: #0000008b;
+    background-color: #000000c3;
     height: 60px;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .nav-item:hover {
-    background-color: rgba(0, 0, 0, 0.579);
+    background-color: rgba(0, 0, 0, 0.764);
 }
 
 .search {
@@ -58,7 +58,7 @@
     padding: 10px;
     border: none;
     border-radius: 20px;
-    background-color: #313131;
+    background-color: #ff0000;
     color: white;
     cursor: pointer;
     font-weight: 600;

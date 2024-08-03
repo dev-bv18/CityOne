@@ -1,0 +1,10 @@
+.board{
+    background:linear-gradient(rgba(0, 0, 0, 0.499),rgba(255, 0, 0, 0.407)) ;
+    height: 50%;
+    width: 50%;
+    border-radius: 20px;
+}
+.board h1{
+    color: aliceblue;
+    text-align: center;
+}
