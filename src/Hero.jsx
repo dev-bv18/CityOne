@@ -11,7 +11,6 @@ const Hero = () => {
                     <p>.</p>
                 <p>Green City</p>
                 </div>
-                
                 <a href="#new">
                     <div className="hero-latest-btn">
                        Events

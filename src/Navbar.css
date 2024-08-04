@@ -11,8 +11,9 @@
 .nav-logo {
     display: flex;
     align-items: center;
-   
-   
+    flex-direction: column;
+    height: 50px;
+    position: relative;
 }
 
 #logo {
@@ -20,7 +21,51 @@
     width: auto;
     background-color: white;
     border-radius: 50%;
-    
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#logo.rotate {
+    transform: rotate(180deg);
+}
+
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    background: linear-gradient(rgba(255, 0, 0, 0.353), rgba(0, 0, 0, 0.288));
+}
+
+.menu.spread {
+    max-height: 300px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items li {
+    font-weight: 300;
+    padding: 10px 30px;
+
+    transition: all 0.4s ease-in-out;
+}
+
+.menu-items li:hover {
+    background-color: #00000074;
 }
 
 .nav-items {
@@ -34,7 +79,8 @@
 .nav-item {
     cursor: pointer;
     border-radius: 20px;
-    padding: 10px;text-align: center;
+    padding: 10px;
+    text-align: center;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
