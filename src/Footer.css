@@ -1,8 +1,24 @@
-.footer{
+.footer {
     background-color: rgba(0, 0, 0, 0.74);
     color: white;
     text-align: center;
     padding: 20px;
     position: relative;
     font-weight: 600;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px; /* Adjust font size as needed */
+    opacity: 0.8; /* Adjust opacity for a softer look */
+}
+
+.footer-content p:last-child {
+    font-weight: bold; /* Example of making the last line bold */
 }

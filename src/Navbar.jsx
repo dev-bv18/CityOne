@@ -11,34 +11,40 @@ const Navbar = () => {
 
     return (
         <div className="nav">
-            <Link to="/" className="nav-logo" onClick={toggleMenu}>
+            <div className="nav-logo" onClick={toggleMenu}>
                 <img src={logo1} id="logo" alt="Logo" className={menuVisible ? 'rotate' : ''} />
                 <div className={`menu ${menuVisible ? 'spread' : ''}`}>
                     <ul className='menu-items'>
-                        <li>News</li>
-                        <li>Maps</li>
-                        <li>Parks</li>
+                        <li>
+                            <Link to="/news" style={{ textDecoration: 'none', color: 'white' }} onClick={toggleMenu}>News</Link>
+                        </li>
+                        <li>
+                            <Link to="/parks" style={{ textDecoration: 'none', color: 'white' }} onClick={toggleMenu}>Parks</Link>
+                        </li>
+                        <li>
+                            <Link to="/places" style={{ textDecoration: 'none', color: 'white' }} onClick={toggleMenu}>Places</Link>
+                        </li>
                     </ul>
                 </div>
-            </Link>
+            </div>
             <div className='nav-items'>
                 <Link to='/' className="nav-item">
-                    <div style={{textDecoration:'none',color:'white'}}>Home</div>
+                    <div style={{ textDecoration: 'none', color: 'white' }}>Home</div>
                 </Link>
                 <Link to='/community' className="nav-item">
-                    <div style={{textDecoration:'none',color:'white'}}>Community</div>
+                    <div style={{ textDecoration: 'none', color: 'white' }}>Community</div>
                 </Link>
                 <Link to='/services' className="nav-item">
-                    <div style={{textDecoration:'none',color:'white'}}>Services</div>
+                    <div style={{ textDecoration: 'none', color: 'white' }}>Services</div>
                 </Link>
                 <Link to='/businesses' className="nav-item">
-                    <div style={{textDecoration:'none',color:'white'}}>Businesses</div>
+                    <div style={{ textDecoration: 'none', color: 'white' }}>Businesses</div>
                 </Link>
                 <Link to='/about' className="nav-item">
-                    <div style={{textDecoration:'none',color:'white'}}>About us</div>
+                    <div style={{ textDecoration: 'none', color: 'white' }}>About us</div>
                 </Link>
                 <Link to='/contact' className="nav-item">
-                    <div style={{textDecoration:'none',color:'white'}}>Contact Us</div>
+                    <div style={{ textDecoration: 'none', color: 'white' }}>Contact Us</div>
                 </Link>
             </div>
             <div className='search'>
