@@ -1,8 +1,13 @@
 import React from 'react';
 import Hero from './Hero';
+import WeatherApp from './Weather';
 const Home = () => {
-    return (
-       <Hero/>
+    return (<div>
+         <Hero/>
+         <WeatherApp/>
+    </div>
+      
+
     );
 };
 
