@@ -7,4 +7,8 @@
 .board h1{
     color: aliceblue;
     text-align: center;
+    text-decoration: underline;
+}
+.board hr{
+   background-color: black;
 }
