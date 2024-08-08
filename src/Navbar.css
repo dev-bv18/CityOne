@@ -124,16 +124,18 @@
     display: none;
     z-index: 1;
     transition: all 2s ease-in-out;
-    border-radius: 30px;
+    border-radius: 6px;
 }
 .dropdown ul{
     list-style-type: none;
     padding: 0px;
+   
 }
 .dropdown ul li{
     padding: 10px;
     font-weight: 700;
     margin: 10px;
+    border-radius: 6px;
 }
 .dropdown ul li:hover{
    background-color: #bab5b5;
