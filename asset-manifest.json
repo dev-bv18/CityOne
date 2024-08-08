@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/CityOne/static/css/main.4c0b864a.css",
-    "main.js": "/CityOne/static/js/main.cac00533.js",
+    "main.css": "/CityOne/static/css/main.964eeb98.css",
+    "main.js": "/CityOne/static/js/main.ac626a5c.js",
     "static/js/453.2e0005d4.chunk.js": "/CityOne/static/js/453.2e0005d4.chunk.js",
     "static/media/rourkela_banner.jpg": "/CityOne/static/media/rourkela_banner.79baa509dc220ebe38e2.jpg",
     "static/media/airport.jpg": "/CityOne/static/media/airport.97af316fa059dccc5040.jpg",
     "static/media/logo1.svg": "/CityOne/static/media/logo1.28965daf6b68698f707792407b6919d8.svg",
     "index.html": "/CityOne/index.html",
-    "main.4c0b864a.css.map": "/CityOne/static/css/main.4c0b864a.css.map",
-    "main.cac00533.js.map": "/CityOne/static/js/main.cac00533.js.map",
+    "main.964eeb98.css.map": "/CityOne/static/css/main.964eeb98.css.map",
+    "main.ac626a5c.js.map": "/CityOne/static/js/main.ac626a5c.js.map",
     "453.2e0005d4.chunk.js.map": "/CityOne/static/js/453.2e0005d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c0b864a.css",
-    "static/js/main.cac00533.js"
+    "static/css/main.964eeb98.css",
+    "static/js/main.ac626a5c.js"
   ]
 }
