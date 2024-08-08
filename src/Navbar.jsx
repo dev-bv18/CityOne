@@ -5,8 +5,18 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [menuVisible, setMenuVisible] = useState(false);
+    const [servicesVisible, setServicesVisible] = useState(false);
+
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
+    };
+
+    const showServices = () => {
+        setServicesVisible(true);
+    };
+
+    const hideServices = () => {
+        setServicesVisible(false);
     };
 
     return (
@@ -34,9 +44,22 @@ const Navbar = () => {
                 <Link to='/community' className="nav-item">
                     <div style={{ textDecoration: 'none', color: 'white' }}>Community</div>
                 </Link>
-                <Link to='/services' className="nav-item">
-                    <div style={{ textDecoration: 'none', color: 'white' }}>Services</div>
-                </Link>
+                <div 
+                    className="nav-item" 
+                    onMouseEnter={showServices} 
+                    onMouseLeave={hideServices}
+                >
+                    Services
+                    <div className={`dropdown ${servicesVisible ? 'show' : ''}`}>
+                        <ul className='dropdown-items'>
+                            <li>Education</li>
+                            <li>Hospitals</li>
+                            <li>Clinics</li>
+                            <li>Police Station</li>
+                            <li>Transportation</li>
+                        </ul>
+                    </div>
+                </div>
                 <Link to='/businesses' className="nav-item">
                     <div style={{ textDecoration: 'none', color: 'white' }}>Businesses</div>
                 </Link>
