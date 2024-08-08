@@ -1,0 +1,88 @@
+.fullbox {
+    background: 
+      linear-gradient(70deg, rgba(0, 0, 0, 0.592), rgba(255, 0, 0, 0.7)),
+      url('./airport.jpg'); 
+    background-size: cover, 200% 200%;
+    background-blend-mode: normal;
+    width: 100%;
+    text-align: center;
+    animation: gradientAnimation 60s ease-in-out infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .mainbox {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .details {
+    background-color: rgba(0, 0, 0, 0.452);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .details ul {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .details ul li {
+    padding: 5px;
+  }
+  
+  .sidebox {
+    text-align: center;
+  }
+  
+  .sidebox h2 {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  .sidebox .cond {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-weight: 600;
+  }
+  
+  .temper {
+    font-size: 30px;
+    color: rgb(255, 254, 253);
+    opacity: 70%;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .sidebox .cond p {
+    display: flex;
+    flex-direction: column-reverse;
+    font-weight: 900;
+    transition: all 0.3s ease-in-out;
+  }
+  .sidebox .cond p:hover{
+    text-shadow: 2px 2px 20px;
+  }
+  
+  .desc {
+    font-style: italic;
+    color: rgb(255, 255, 255);
+  }
+  

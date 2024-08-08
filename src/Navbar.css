@@ -11,9 +11,9 @@
 .nav-logo {
     display: flex;
     align-items: center;
-    flex-direction: column;
     height: 50px;
     position: relative;
+    cursor: pointer;
 }
 
 #logo {
@@ -22,7 +22,6 @@
     background-color: white;
     border-radius: 50%;
     margin: 5px;
-    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
@@ -41,7 +40,7 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s ease-in-out;
-    background: linear-gradient(rgba(255, 0, 0, 0.353), rgba(0, 0, 0, 0.288));
+    background: linear-gradient(rgb(111, 0, 0), rgba(0, 0, 0, 0.647));
 }
 
 .menu.spread {
@@ -60,7 +59,7 @@
 .menu-items li {
     font-weight: 300;
     padding: 10px 30px;
-
+    color: white;
     transition: all 0.4s ease-in-out;
 }
 
