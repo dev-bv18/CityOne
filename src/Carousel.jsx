@@ -7,21 +7,19 @@ const Carousel = ({ images }) => {
   const [opacity, setOpacity] = useState(1);
 
   const nextImage = useCallback(() => {
-    setOpacity(0); 
+    setOpacity(0);
     setTimeout(() => {
-      const newIndex = (currentImageIndex + 1) % images.length;
-      setCurrentImageIndex(newIndex);
-      setOpacity(1); 
-    }, 600); 
+      setCurrentImageIndex((currentImageIndex + 1) % images.length);
+      setOpacity(1);
+    }, 600);
   }, [currentImageIndex, images.length]);
 
   const prevImage = useCallback(() => {
-    setOpacity(0); 
+    setOpacity(0);
     setTimeout(() => {
-      const newIndex = (currentImageIndex - 1 + images.length) % images.length;
-      setCurrentImageIndex(newIndex);
-      setOpacity(1); 
-    }, 600); 
+      setCurrentImageIndex((currentImageIndex - 1 + images.length) % images.length);
+      setOpacity(1);
+    }, 600);
   }, [currentImageIndex, images.length]);
 
   useEffect(() => {

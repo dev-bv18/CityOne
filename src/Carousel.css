@@ -21,7 +21,7 @@
 
 .carousel-text {
   font-family: "Oswald", sans-serif;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 0 20px;
 }
 
@@ -58,12 +58,12 @@
 
 .carousel-inner {
   position: relative;
-  opacity: 50%;
 }
 
 .carousel-image {
   width: 100%;
   display: block;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-control {
@@ -76,7 +76,7 @@
   padding: 10px;
   cursor: pointer;
   font-size: 100px;
-  z-index: 3;
+  z-index: 5;
   transition: all 0.4s ease-in-out;
 }
 
@@ -89,5 +89,5 @@
 }
 
 .carousel-control:hover {
-  opacity: 70%;
+  opacity: 0.7;
 }

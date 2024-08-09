@@ -3,7 +3,8 @@ import './ContactUs.css';
 
 const ContactUs = () => {
     return (
-        <div className="main-box">
+        <div className="container">
+            <div className="main-box">
           <h1 class="get">Get in Touch!</h1>
             <form action="POST">
                 <div className="form-group">
@@ -22,6 +23,7 @@ const ContactUs = () => {
                 {/* <img src="/CityOne/static/media/logo1.28965daf6b68698f707792407b6919d8.svg" id="logo" alt="Logo" class=""  opacity= "0.5" ></img> */}
                 <button type="submit">Send Message</button>
             </form>
+        </div>
         </div>
     );
 }

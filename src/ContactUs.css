@@ -1,80 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
+.container {
+  background: url('./images.jpeg') rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  margin: 0;
+  padding: 40px;
+  animation: movebg 10s ease-in-out infinite alternate;
+}
+
+@keyframes movebg {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 .main-box {
-    background: linear-gradient(rgb(102, 0, 0), rgb(0, 0, 0));
-    margin: 0px ;
-    padding: 30px;
-    max-width: 100%;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
+  background: linear-gradient(rgb(102, 0, 0), rgb(0, 0, 0));
+  margin: auto;
+  padding: 30px;
+  max-width: 600px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
 }
 
 .get {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   font-weight: 800;
-    font-size: 60px;
-
-    text-align: center;
-    color: #ffffff;
-    margin: 10px;
+  font-size: 60px;
+  text-align: center;
+  color: #ffffff;
+  margin: 10px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .form-group label {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .form-group input[type='text'],
 .form-group input[type='email'],
 .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border-radius: 6px;
-    border: 0px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    font-size: 16px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .form-group textarea {
-    height: 150px;
-    resize: vertical;
+  height: 150px;
+  resize: vertical;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #bab2b2;
-    opacity: 0.7;
-    font-size: 16px;
+  color: #bab2b2;
+  opacity: 0.7;
+  font-size: 16px;
 }
 
 button[type='submit'] {
-    background-color: #510202;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
-    color: white;
-    transition: background-color 0.3s ease;
-    text-align: center;
+  background-color: #510202;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 button[type='submit']:hover {
-    background-color: #820404;
+  background-color: #820404;
 }
