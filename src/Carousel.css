@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Playwrite+AR:wght@100..400&display=swap');
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-color: black;
+}
+
+.carousel-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  color: white;
+}
+
+.carousel-text {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  padding: 0 20px;
+}
+
+.carousel-text h1 {
+  font-size: 60px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px 40px;
+  background-color: red;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Oswald", sans-serif;
+}
+
+.hero-button:hover {
+  background-color: darkred;
+  transform: scale(1.1);
+}
+
+.hero-button:focus {
+  outline: none;
+}
+
+.carousel-inner {
+  position: relative;
+  opacity: 50%;
+}
+
+.carousel-image {
+  width: 100%;
+  display: block;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 100px;
+  z-index: 3;
+  transition: all 0.4s ease-in-out;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-control:hover {
+  opacity: 70%;
+}
