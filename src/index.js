@@ -15,6 +15,7 @@ root.render(
     <Navbar/>
     <Routes>
       <Route path="/CityOne" element={<Home/>}/>
+
       <Route path="/contact" element={<ContactUs/>}/>
      </Routes>
     <Footer/>

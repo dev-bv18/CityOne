@@ -20,6 +20,7 @@ const Hero = () => {
             <div className="hero-right">
                 <Notices/>
             </div>
+           
         </div>
     );
 };

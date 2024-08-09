@@ -35,6 +35,7 @@
     left: 0;
     right: 0;
     width: 200px;
+    z-index: 1;
     margin: auto;
     text-align: center;
     overflow: hidden;
@@ -115,3 +116,30 @@
 .search button:hover {
     background-color: #000000;
 }
+.dropdown{
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    margin: 0px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    transition: all 2s ease-in-out;
+    border-radius: 6px;
+}
+.dropdown ul{
+    list-style-type: none;
+    padding: 0px;
+   
+}
+.dropdown ul li{
+    padding: 10px;
+    font-weight: 700;
+    margin: 10px;
+    border-radius: 6px;
+}
+.dropdown ul li:hover{
+   background-color: #bab5b5;
+}
+.show{
+    display: block;
+   }
