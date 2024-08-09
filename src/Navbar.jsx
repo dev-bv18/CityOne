@@ -28,7 +28,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='nav-items'>
-                <Link to='/' className="nav-item">
+                <Link to='/CityOne' className="nav-item">
                     <div style={{ textDecoration: 'none', color: 'white' }}>Home</div>
                 </Link>
                 <Link to='/community' className="nav-item">
