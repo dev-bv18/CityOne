@@ -14,6 +14,7 @@
     height: 50px;
     position: relative;
     cursor: pointer;
+    z-index: 1;
 }
 
 #logo {
@@ -143,3 +144,104 @@
 .show{
     display: block;
    }
+  .burger{
+    display: none;
+  }
+@media screen and (max-width: 500px) {
+    #root {
+        width: 151%;
+    }
+
+    .nav {
+        width: 141%;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        position: absolute;
+        padding-bottom: 10px;
+    }
+
+    .nav-logo {
+        left: 40px;
+    }
+
+    .burger {
+        display: block;
+        margin: 10px;
+    }
+    .burger img{
+       height: 30px;
+        color: white;
+        font-weight: 700;
+    }
+
+    .nav-items.show,
+    .search.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        justify-content: flex-start;
+        display: none;
+       
+    }
+
+    .nav-item {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .search {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+        display: none;
+     
+    }
+
+    .search input {
+        flex-grow: 1;
+        padding: 5px;
+        width: 70%;
+    }
+
+    .search button {
+        width: 25%;
+    }
+
+    .dropdown {
+        width: 100%;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .dropdown ul {
+        padding: 0;
+    }
+
+    .dropdown ul li {
+        padding: 10px 5px;
+        margin: 5px 0;
+    }
+
+    .menu {
+        width: 100%;
+        position: relative;
+        top: 50px;
+        
+    }
+ .menu-items{
+    display: flex;
+    padding: 20px;
+ }
+    .menu-items li {
+        padding: 20px 0px;
+    }
+    .footer{
+        z-index: -1;
+    }
+}

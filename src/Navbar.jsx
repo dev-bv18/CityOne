@@ -2,15 +2,18 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import logo1 from './logo1.svg';
 import { Link } from 'react-router-dom';
+import burger from './2line.svg';
 
 const Navbar = () => {
     const [menuVisible, setMenuVisible] = useState(false);
     const [servicesVisible, setServicesVisible] = useState(false);
-
+    const [NavVisible,setNavVisible]=useState(false);
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
     };
-
+    const toggleNav= () => {
+        setNavVisible(!NavVisible);
+    };
     const showServices = () => {
         setServicesVisible(true);
     };
@@ -37,7 +40,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
-            <div className='nav-items'>
+            <div className={`nav-items ${NavVisible?'show':''}`} >
                 <Link to='/CityOne' className="nav-item">
                     <div style={{ textDecoration: 'none', color: 'white' }}>Home</div>
                 </Link>
@@ -70,13 +73,14 @@ const Navbar = () => {
                     <div style={{ textDecoration: 'none', color: 'white' }}>Contact Us</div>
                 </Link>
             </div>
-            <div className='search'>
+            <div className={`search  ${NavVisible?'show':''}`}>
                 <input 
                     type="text" 
                     placeholder='Enter here' 
                 />
                 <button>Search</button>
             </div>
+            <div className="burger" onClick={toggleNav} ><img src={burger} alt="icon" /></div>
         </div>
     );
 };
