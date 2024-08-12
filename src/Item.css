@@ -1,0 +1,96 @@
+.service
+{
+    width: 300px;
+    margin: 20px;
+
+}
+.service img{
+    width: 280px;
+    height:500px;
+}
+.service p{
+    margin: 6px 0px;
+   
+font-size: 20px;
+font-weight: 700;
+}
+.service-contact
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.service-phoneno
+{
+    color: darkolivegreen;
+    font-size: 15px;
+ text-align: end;
+    font-weight: 600;
+}
+.service-website
+{
+    color: green;
+    font-size:15px ;
+    text-align: end;
+    font-weight: 500;
+}
+.service:hover
+{
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+@media (max-width:1280px) {
+    .service{
+        width: 220px;
+        font-size: 14px;
+    }
+    .service img{
+        width: 220px;
+        height: 400px;
+    }
+    .service-website{
+        font-size: 14px;
+        cursor: pointer;
+    }
+}
+@media(max-width:1024px)
+{
+    .service{
+        width: 170px;
+        font-size: 13px;
+    }
+    .service img{
+        width: 170px;
+        height: 300px;
+    }
+    .service-website{
+        font-size: 13px;
+    } 
+}
+@media(max-width:800px)
+{
+    .service{
+        width: 120px;
+        font-size: 12px;
+    }
+    .service img{
+        width: 120px;
+        height: 200px;
+    }
+    .service-website{
+        font-size: 12px;
+    } 
+}
+@media(max-width:500px)
+{
+    .service{
+        width: 160px;
+    }
+    .service img{
+        width: 160px;
+        height: 200px;
+    }
+    .service-website{
+        font-size: 12px;
+    } 
+}

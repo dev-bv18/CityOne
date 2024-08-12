@@ -1,0 +1,13 @@
+
+.service-category
+{
+    margin: 20px 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+.service-category-products
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 80px;
+}

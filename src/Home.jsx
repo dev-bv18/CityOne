@@ -5,6 +5,7 @@ import Carousel from './Carousel';
 import slide1 from './slide1.jpg';
 import slide2 from './slide2.jpg';
 import slide3 from './slide3.jpg';
+import NewCollections from './NewCollections';
 const images = [
     slide1,slide2,slide3
    
@@ -14,6 +15,7 @@ const Home = () => {
          <Hero/>
          <WeatherApp/>
          <Carousel images={images}/>
+         <NewCollections/>
     </div>
       
 
