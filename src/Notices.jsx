@@ -5,7 +5,7 @@ const Notices = () => {
     <div className='board'>
       <h1>Notice Board</h1>
       <hr />
-      <div className='box'>
+      <div className='container'>
         <ul>
           <li>Plantation being done by SPOs Rourkela at Rourkela Head Post Office premises on the occasion of 78th independence day.
             #IndependenceDay2024</li><br></br>
