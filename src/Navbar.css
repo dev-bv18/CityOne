@@ -149,7 +149,7 @@
   }
 @media screen and (max-width: 500px) {
     #root {position: absolute;
-        width: 151%;
+        width: 200%;
     }
 
     .nav {
