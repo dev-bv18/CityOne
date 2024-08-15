@@ -90,3 +90,13 @@ a {
         transform: rotateZ(360deg);
     }
 }
+@media screen and (max-width: 500px){
+    .hero{
+        flex-direction: column;
+        padding-top: 210px;
+    }
+    .hero-left h2{
+        font-size: 80px;
+    }
+
+}

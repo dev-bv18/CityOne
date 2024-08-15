@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CityOne/static/css/main.4b184f90.css",
+    "main.css": "/CityOne/static/css/main.7c560859.css",
     "main.js": "/CityOne/static/js/main.420afc1a.js",
     "static/js/453.2e0005d4.chunk.js": "/CityOne/static/js/453.2e0005d4.chunk.js",
     "static/media/rourkela_banner.jpg": "/CityOne/static/media/rourkela_banner.79baa509dc220ebe38e2.jpg",
@@ -12,12 +12,12 @@
     "static/media/nothing.avif": "/CityOne/static/media/nothing.abc32c2cd1db33787f88.avif",
     "static/media/2line.svg": "/CityOne/static/media/2line.a501e51c660682b3708e63138cca9017.svg",
     "index.html": "/CityOne/index.html",
-    "main.4b184f90.css.map": "/CityOne/static/css/main.4b184f90.css.map",
+    "main.7c560859.css.map": "/CityOne/static/css/main.7c560859.css.map",
     "main.420afc1a.js.map": "/CityOne/static/js/main.420afc1a.js.map",
     "453.2e0005d4.chunk.js.map": "/CityOne/static/js/453.2e0005d4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b184f90.css",
+    "static/css/main.7c560859.css",
     "static/js/main.420afc1a.js"
   ]
 }

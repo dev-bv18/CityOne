@@ -12,3 +12,14 @@
 .board h1:hover{
     opacity: 70%;
 }
+@media screen and (max-width: 500px) {
+    .board{
+        width: 60%;
+        height: 100%;    
+        margin-bottom: 40px;   
+    }
+    .board h1{
+        font-size:25px;
+        padding: 4px;
+    }
+}
