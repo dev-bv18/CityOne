@@ -94,13 +94,16 @@ a {
     .hero{
         flex-direction: column;
         padding-top: 210px;
-        padding-left: 0px;
     }
     .hero-left{
-        padding-left: 30px;
+        padding-left: 130px;
+    }
+    .hero-latest-btn{
+        width: 85%;
+        font-size: 30px;
     }
     .hero-left h2{
-        font-size: 70px;
+        font-size: 100px;
     }
 
 }

@@ -156,22 +156,30 @@
         flex-direction: column;
         align-items: center;
         height: auto;
+        font-size: 30px;
         position:fixed;
         padding-bottom: 10px;
     }
 
     .nav-logo {
-        left: 40px;
+        left: 58px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    #logo{
+        height: 60px;
     }
 
     .burger {
         display: block;
+        height: 40px;
         margin: 10px;
     }
     .burger img{
        height: 30px;
         color: white;
         font-weight: 700;
+        height: 50px;
     }
 
     .nav-items.show,
@@ -205,11 +213,13 @@
     .search input {
         flex-grow: 1;
         padding: 5px;
+        height: 30px;
         width: 70%;
     }
 
     .search button {
         width: 25%;
+        font-size: 30px;
     }
 
     .dropdown {

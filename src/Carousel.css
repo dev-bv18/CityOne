@@ -93,12 +93,12 @@
 }
 @media screen and (max-width: 500px){
   .carousel-text h1{
-    font-size: 35px;
+    font-size: 60px;
   }
   .hero-button{
-    font-size: 15px;
+    font-size: 30px;
   }
   .carousel-control.next,.carousel-control.prev{
-font-size: 20px;
+font-size: 100px;
   }
 }
