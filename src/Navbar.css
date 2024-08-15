@@ -148,16 +148,16 @@
     display: none;
   }
 @media screen and (max-width: 500px) {
-    #root {
+    #root {position: absolute;
         width: 151%;
     }
 
     .nav {
-        width: 141%;
+        width: 100%;
         flex-direction: column;
         align-items: center;
         height: auto;
-        position: absolute;
+        position:fixed;
         padding-bottom: 10px;
     }
 
