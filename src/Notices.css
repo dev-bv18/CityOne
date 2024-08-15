@@ -1,14 +1,49 @@
-.board{
-    background:linear-gradient(rgba(0, 0, 0, 0.499),rgba(255, 0, 0, 0.407)) ;
+.board {
+    background: linear-gradient(rgba(0, 0, 0, 0.499), rgba(255, 0, 0, 0.407));
     height: 50%;
     width: 50%;
     border-radius: 20px;
+    overflow: hidden;
+    position: relative;
 }
-.board h1{
+
+.board h1 {
     color: rgb(255, 255, 255);
     text-align: center;
     transition: all 0.3s ease-in-out;
 }
-.board h1:hover{
+
+.board h1:hover {
     opacity: 70%;
+}
+
+.container {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.container ul {
+    list-style: circle;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    animation: scrollUp 10s linear infinite;
+}
+
+.container li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #ddd;
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scrollUp {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
 }
