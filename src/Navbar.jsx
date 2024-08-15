@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import logo1 from './logo1.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import burger from './2line.svg';
 
 const Navbar = () => {
-    const [menu,setMenu]=useState("education");
+    const [menu, setMenu] = useState("education");
     const [menuVisible, setMenuVisible] = useState(false);
     const [servicesVisible, setServicesVisible] = useState(false);
     const [NavVisible, setNavVisible] = useState(false);
+    const [searchInput, setSearchInput] = useState('');
+
+    const navigate = useNavigate();
 
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
@@ -24,6 +27,12 @@ const Navbar = () => {
 
     const hideServices = () => {
         setServicesVisible(false);
+    };
+
+    const handleSearch = () => {
+        if (searchInput.trim()) {
+            navigate(`/searchresults?query=${encodeURIComponent(searchInput)}`);
+        }
     };
 
     return (
@@ -59,25 +68,35 @@ const Navbar = () => {
                     Services
                     <div className={`dropdown ${servicesVisible ? 'show' : ''}`}>
                         <ul className='dropdown-items'>
-                            <li onClick={()=>{setMenu("education")}}>
-                                <Link to='/education' style={{ textDecoration: 'none' }}>Education</Link>
-                                {menu==="education"?<hr/>:<></>}
+                            <li>
+                                <Link to='/education' style={{ textDecoration: 'none' }} onClick={() => setMenu("education")}>
+                                    Education
+                                </Link>
+                                {menu === "education" ? <hr /> : null}
                             </li>
-                            <li onClick={()=>{setMenu("hospital")}}>
-                                <Link to='/hospital' style={{ textDecoration: 'none'}}>Hospitals</Link>
-                                {menu==="hospital"?<hr/>:<></>}
+                            <li>
+                                <Link to='/hospital' style={{ textDecoration: 'none' }} onClick={() => setMenu("hospital")}>
+                                    Hospitals
+                                </Link>
+                                {menu === "hospital" ? <hr /> : null}
                             </li>
-                            <li onClick={()=>{setMenu("clinics")}}>
-                                <Link to='/clinics' style={{ textDecoration: 'none' }}>Clinics</Link>
-                                {menu==="clinics"?<hr/>:<></>}
+                            <li>
+                                <Link to='/clinics' style={{ textDecoration: 'none' }} onClick={() => setMenu("clinics")}>
+                                    Clinics
+                                </Link>
+                                {menu === "clinics" ? <hr /> : null}
                             </li>
-                            <li onClick={()=>{setMenu("police")}}>
-                                <Link to='/police' style={{ textDecoration: 'none'}}>Police Station</Link>
-                                {menu==="police"?<hr/>:<></>}
+                            <li>
+                                <Link to='/police' style={{ textDecoration: 'none' }} onClick={() => setMenu("police")}>
+                                    Police Station
+                                </Link>
+                                {menu === "police" ? <hr /> : null}
                             </li>
-                            <li onClick={()=>{setMenu("transport")}}>
-                                <Link to='/transport' style={{ textDecoration: 'none'}}>Transportation</Link>
-                                {menu==="tranport"?<hr/>:<></>}
+                            <li>
+                                <Link to='/transport' style={{ textDecoration: 'none' }} onClick={() => setMenu("transport")}>
+                                    Transportation
+                                </Link>
+                                {menu === "transport" ? <hr /> : null}
                             </li>
                         </ul>
                     </div>
@@ -93,8 +112,13 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className={`search ${NavVisible ? 'show' : ''}`}>
-                <input type="text" placeholder='Enter here' />
-                <button>Search</button>
+                <input 
+                    type="text" 
+                    placeholder='Enter here' 
+                    value={searchInput} 
+                    onChange={(e) => setSearchInput(e.target.value)} 
+                />
+                <button onClick={handleSearch}>Search</button>
             </div>
             <div className="burger" onClick={toggleNav}><img src={burger} alt="icon" /></div>
         </div>
