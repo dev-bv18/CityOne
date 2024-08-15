@@ -96,6 +96,9 @@ a {
         padding-top: 210px;
         padding-left: 0px;
     }
+    .hero-left{
+        padding-left: 30px;
+    }
     .hero-left h2{
         font-size: 70px;
     }

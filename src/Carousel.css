@@ -91,3 +91,14 @@
 .carousel-control:hover {
   opacity: 0.7;
 }
+@media screen and (max-width: 500px){
+  .carousel-text h1{
+    font-size: 35px;
+  }
+  .hero-button{
+    font-size: 15px;
+  }
+  .carousel-control.next,.carousel-control.prev{
+font-size: 20px;
+  }
+}
