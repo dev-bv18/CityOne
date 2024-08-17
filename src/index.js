@@ -8,6 +8,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import ContactUs from './ContactUs';
 import ServiceCategory from './ServiceCategory'; 
+import AboutUs from './AboutUs';
 import ServiceContextProvider from './ServiceContext';// Updated to reflect the new name
 import SearchResults from './SearchResults';
 
@@ -25,6 +26,7 @@ root.render(
       <Route path="/police" element={<ServiceCategory category="police" />} />
       <Route path="/transport" element={<ServiceCategory category="transport" />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path='/about' element={<AboutUs/>}/>
       <Route path="/searchresults" element={<SearchResults/>}/>
     </Routes>
     <Footer/>
