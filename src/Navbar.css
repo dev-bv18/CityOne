@@ -141,6 +141,29 @@
 .dropdown ul li:hover{
    background-color: #bab5b5;
 }
+.new-notif{
+    background-color: red;
+    border-radius: 20px;
+    padding: 3px;
+    font-size: 10px;
+    z-index: 1;
+    position: absolute;
+    left: 30px;
+    top: -1px;
+    animation: blink 1.5s infinite ease-in-out ;
+}
+@keyframes blink {
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+    
+}
 .show{
     display: block;
    }

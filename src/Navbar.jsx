@@ -39,6 +39,7 @@ const Navbar = () => {
         <div className="nav">
             <div className="nav-logo" onClick={toggleMenu}>
                 <img src={logo1} id="logo" alt="Logo" className={menuVisible ? 'rotate' : ''} />
+                <p className='new-notif'>new!</p>
                 <div className={`menu ${menuVisible ? 'spread' : ''}`}>
                     <ul className='menu-items'>
                         <li>
