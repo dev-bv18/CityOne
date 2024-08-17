@@ -65,49 +65,53 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="Main-intro">
-      <h1 className="about">About Us</h1>
-      <p className="welcome">
+    <div className="aboutus-main-intro">
+      <h1 className="aboutus-about">About Us</h1>
+      <p className="aboutus-welcome">
         Welcome to <b>CityOne</b>, your premier destination for all things city-related!
       </p>
 
-      <div className="carousel">
+      <div className="aboutus-carousel">
         <div
-          className="carousel-track"
+          className="aboutus-carousel-track"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {members.map((member, index) => (
-            <div className="member" key={index}>
-              <img src={member.image} alt={member.name} />
-              <h2>{member.name}</h2>
-              <button className="inner-btn" onClick={() => toggleInfo(index)}>
+            <div className="aboutus-member" key={index}>
+              <img src={member.image} alt={member.name} className="aboutus-member-img" />
+              <h2 className="aboutus-member-name">{member.name}</h2>
+              <button className="aboutus-inner-btn" onClick={() => toggleInfo(index)}>
                 {infoVisibility[index] ? "Hide Info" : "Show Info"}
               </button>
               {infoVisibility[index] && (
-                <div className="info-container">
-                  <p className="info">{member.info}</p>
+                <div className="aboutus-info-container">
+                  <p className="aboutus-info">{member.info}</p>
                 </div>
               )}
             </div>
           ))}
         </div>
-        <div className="carousel-controls">
-          <button onClick={handlePrevClick}>&lt;</button>
-          <button onClick={handleNextClick}>&gt;</button>
+        <div className="aboutus-carousel-controls">
+          <button className="aboutus-carousel-btn" onClick={handlePrevClick}>&lt;</button>
+          <button className="aboutus-carousel-btn" onClick={handleNextClick}>&gt;</button>
         </div>
       </div>
 
-      <div className="the-team">
+      <div className="aboutus-the-team">
         <p>
           We're a team of students united by our passion for technology and innovation. Individually, we're accomplished in our own right, with each member bringing a unique combination of skills, experience, and perspectives to the table. Whether it's web development, UX design, backend development, data analysis, or project management, we're all dedicated to excellence in our respective areas. But what makes us truly special is our ability to come together as a cohesive unit, leveraging our collective strengths to achieve far more than we could alone. We're a team of equals, driven by a shared enthusiasm for learning, growth, and making a meaningful impact.
         </p>
       </div>
 
-      <div className="linkedin-profiles">
-        <h2>Connect with Us on LinkedIn</h2>
-        <ul id="links">
+      <div className="aboutus-linkedin-profiles">
+        <h2 className="aboutus-linkedin-title">Connect with Us on LinkedIn</h2>
+        <ul className="aboutus-links-list">
           {members.map((member) => (
-            <li key={member.name}>
-              <a href={member.linkedInUrl} target="_blank" rel="noopener noreferrer">
+            <li className="aboutus-link-item" key={member.name}>
+              <a
+                className="aboutus-link"
+                href={member.linkedInUrl}
+                target="_blank"
+                rel="noopener noreferrer">
                 {member.name}
               </a>
             </li>
