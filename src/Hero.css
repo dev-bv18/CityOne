@@ -73,23 +73,7 @@ a {
     justify-content: center;
 }
 
-.hero-right img {
-    height: 500px;
-    width: 500px;
-    border-radius: 50%;
-    opacity: 100%;
-    box-shadow: 2px 2px 20px 2px rgb(0, 0, 0);
-    animation: spin 15s ease-in-out infinite;
-}
 
-@keyframes spin {
-    0% {
-        transform: rotateZ(0deg);
-    }
-    100% {
-        transform: rotateZ(360deg);
-    }
-}
 @media screen and (max-width: 500px){
     .hero{
         flex-direction: column;

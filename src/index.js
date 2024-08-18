@@ -9,29 +9,35 @@ import Footer from './Footer';
 import ContactUs from './ContactUs';
 import ServiceCategory from './ServiceCategory'; 
 import AboutUs from './AboutUs';
-import ServiceContextProvider from './ServiceContext';// Updated to reflect the new name
+import ServiceContextProvider from './ServiceContext'; // Updated to reflect the new name
 import SearchResults from './SearchResults';
+import Product from './Product';
+import Service from './Service';
+import Notices from './Notices'; // Import Notices if needed
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <ServiceContextProvider>
-  
+  <ServiceContextProvider>
     <BrowserRouter>
-    <Navbar/>
-    <Routes>
-      <Route path="/CityOne" element={<Home />} />
-      <Route path="/education" element={<ServiceCategory category="education" />} />
-      <Route path="/hospital" element={<ServiceCategory category="hospital" />} />
-      <Route path="/clinics" element={<ServiceCategory category="clinics" />} />
-      <Route path="/police" element={<ServiceCategory category="police" />} />
-      <Route path="/transport" element={<ServiceCategory category="transport" />} />
-      <Route path="/contact" element={<ContactUs />} />
-      <Route path='/about' element={<AboutUs/>}/>
-      <Route path="/searchresults" element={<SearchResults/>}/>
-    </Routes>
-    <Footer/>
-  </BrowserRouter>
- </ServiceContextProvider>
+      <Navbar />
+      <Routes>
+        <Route path="/CityOne" element={<Home />} />
+        <Route path="/education" element={<ServiceCategory category="education" />} />
+        <Route path="/hospital" element={<ServiceCategory category="hospital" />} />
+        <Route path="/clinics" element={<ServiceCategory category="clinics" />} />
+        <Route path="/police" element={<ServiceCategory category="police" />} />
+        <Route path="/transport" element={<ServiceCategory category="transport" />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/notice/:id" element={<Product />} />
+        <Route path="/service/:id" element={<Service />} />
+       
+        <Route path='/about' element={<AboutUs />} />
+        <Route path="/searchresults" element={<SearchResults />} />
+        <Route path="/notices" element={<Notices />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  </ServiceContextProvider>
 );
 
 reportWebVitals();

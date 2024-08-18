@@ -2,7 +2,7 @@
     background: 
       linear-gradient(70deg, rgba(0, 0, 0, 0.592), rgba(255, 0, 0, 0.7)),
       url('./airport.jpg'); 
-    background-size: cover, 200% 200%;
+    background-size: cover, 200% 300%;
     background-blend-mode: normal;
     width: 100%;
     text-align: center;
