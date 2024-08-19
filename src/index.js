@@ -14,6 +14,8 @@ import SearchResults from './SearchResults';
 import Product from './Product';
 import Service from './Service';
 import Notices from './Notices'; // Import Notices if needed
+import Parks from './Park';
+import Places from './Places';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +23,9 @@ root.render(
     <BrowserRouter>
       <Navbar />
       <Routes>
+        
+      <Route path="/places" element={<Places/>}/>
+        <Route path="/parks" element={<Parks/>}/>
         <Route path="/CityOne" element={<Home />} />
         <Route path="/education" element={<ServiceCategory category="education" />} />
         <Route path="/hospital" element={<ServiceCategory category="hospital" />} />

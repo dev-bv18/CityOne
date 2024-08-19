@@ -12,6 +12,7 @@ const ServiceCategory = (props) => {
 
   return (
     <div className='service-category'>
+      <h1 className='heading'>{props.category}</h1>
       <div className="service-category-products">
         {filteredServices.length > 0 ? (
           filteredServices.map((item, i) => (

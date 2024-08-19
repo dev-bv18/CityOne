@@ -1,0 +1,87 @@
+/* Parks.css */
+.parks-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .parks-container h1 {
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    color: #2c3e50;
+  }
+  
+  .parks-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .park-link {
+    text-decoration: none;
+    color: inherit; /* Ensures the text color of the link inherits from the parent */
+  }
+  
+  .park-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 30px 0;
+    padding: 30px;
+    background-color: #f9f9f9;
+    gap: 20px;
+  }
+  
+  .park-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  .result-count{
+    font-weight: 600;
+    color: rgb(93, 44, 44);
+  }
+  
+  .park-data {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+  }
+  
+  .park-item h2 {
+    margin-top: 0;
+    color: #e74c3c;
+  }
+  .park-item h3{
+    margin-top: 0;
+
+    
+  }
+  .park-item p {
+    margin: 5px 0;
+    color: #34495e;
+  }
+  
+  .photos-container {
+    display: flex;
+    flex-direction:column;
+    position: relative;
+    gap: 10px;
+  }
+  .park-icon{
+    height: 20px;
+    width: 20px;
+  }
+  .park-item .ratings{
+    color: rgb(104, 59, 59);
+  }
+  
+  .photos-container img {
+    border-radius: 8px;
+    height:200px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .photos-container img:hover {
+    transform: scale(1.05);
+  }
+  
