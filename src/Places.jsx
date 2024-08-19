@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './P.css'; // Import the CSS file
+import './Places.css'; // Import the CSS file
 import LoadingScreen from './LoadingScreen';
 import noimage from './noimage.jpg';
 
