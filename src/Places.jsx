@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './Places.css'; // Import the CSS file
+import './P.css'; // Import the CSS file
 import LoadingScreen from './LoadingScreen';
 import noimage from './noimage.jpg';
 
@@ -13,7 +13,7 @@ const Places = () => {
     // Function to fetch places data
     const fetchPlaces = async () => {
       try {
-        const response = await axios.get('https://dev-bv18.github.io/places'); // Replace with your server URL
+        const response = await axios.get('http://localhost:4000/places'); // Replace with your server URL
         // Filter out parks and keep other tourist places
         const filteredPlaces = response.data.filter(place => place.types && !place.types.includes('park'));
         setPlaces(filteredPlaces);
