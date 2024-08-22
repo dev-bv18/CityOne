@@ -1,33 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './Places.css'; // Import the CSS file
 import LoadingScreen from './LoadingScreen';
+import './Places.css';
 import noimage from './noimage.jpg';
 
-const Places = () => {
-  const [places, setPlaces] = useState([]);
+const Business = () => {
+  const [places, setBusiness] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [filter, setFilter] = useState('all');
-
-  const handleFilterChange = (e) => {
-    setFilter(e.target.value);
-  };
-
-  const filteredPlaces = places.filter((place) => {
-    if (filter === 'all') return true;
-    if (filter === 'temple') return place.types.includes('temple') || place.types.includes('hindu_temple');
-    if (filter === 'nature') return place.types.includes('park') || place.types.includes('natural_feature');
-    if (filter === 'monument') return place.types.includes('monument') || place.types.includes('historical_monument') ||place.types.includes('fountain');
-    return false;
-  });
+  const [filter, setFilter] = useState('all'); // State for selected filter
 
   useEffect(() => {
     // Function to fetch places data
-    const fetchPlaces = async () => {
+    const fetchBusiness = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/places'); // Replace with your server URL
-        setPlaces(response.data);
+        const response = await axios.get('http://localhost:4000/businesses'); // Replace with your server URL
+        // Filter out parks and keep other tourist places
+        const filteredBusiness = response.data.filter(place => place.types && !place.types.includes('businesses'));
+        setBusiness(filteredBusiness);
         setLoading(false);
       } catch (error) {
         setError('Failed to fetch places. Please try again later.');
@@ -35,21 +25,36 @@ const Places = () => {
       }
     };
 
-    fetchPlaces();
+    fetchBusiness();
   }, []);
+
+  // Function to handle filter change
+  const handleFilterChange = (e) => {
+    setFilter(e.target.value);
+  };
+
+  // Filter places based on the selected filter option
+  const filteredPlaces = places.filter((place) => {
+    if (filter === 'all') return true;
+    if (filter === 'food') return place.types.includes('restaurant') || place.types.includes('food');
+    if (filter === 'shopping') return place.types.includes('shopping_mall') || place.types.includes('store');
+    if (filter === 'hotel') return place.types.includes('lodging') || place.types.includes('hotel');
+    return true;
+  });
 
   if (loading) return <LoadingScreen />;
   if (error) return <p className="error-message">{error}</p>;
 
   return (
     <div className="places-container">
-      <h1>Tourist Places in Rourkela</h1>
+      <h1>Businesses in Rourkela</h1>
       <span className='result-count'>Showing {filteredPlaces.length} results</span>
+
       <select name="filter" id="filter" onChange={handleFilterChange}>
         <option value="all">All</option>
-        <option value="temple">Temples</option>
-        <option value="nature">Nature</option>
-        <option value="monument">Monuments</option>
+        <option value="food">Food</option>
+        <option value="shopping">Shopping</option>
+        <option value="hotel">Hotel & resorts</option>
       </select>
 
       {filteredPlaces.length > 0 ? (
@@ -108,4 +113,4 @@ const Places = () => {
   );
 };
 
-export default Places;
+export default Business;

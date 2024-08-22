@@ -16,6 +16,7 @@ import Service from './Service';
 import Notices from './Notices'; // Import Notices if needed
 import Parks from './Park';
 import Places from './Places';
+import Business from './Business';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +26,7 @@ root.render(
       <Routes>
         
       <Route path="/places" element={<Places/>}/>
+      <Route path="/businesses" element={<Business/>}/>
         <Route path="/parks" element={<Parks/>}/>
         <Route path="/CityOne" element={<Home />} />
         <Route path="/education" element={<ServiceCategory category="education" />} />

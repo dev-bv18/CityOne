@@ -29,6 +29,14 @@
     background-color: #f9f9f9;
     gap: 20px;
   }
+  #filter{
+    border: 2px solid rgb(125, 125, 125);
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #filter option{
+    color: rgb(72, 72, 72);
+  }
   
   .place-content {
     display: flex;
