@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import logo1 from './logo1.svg';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import burger from './2line.svg';
 
 const Navbar = () => {
@@ -12,6 +12,8 @@ const Navbar = () => {
     const [searchInput, setSearchInput] = useState('');
 
     const navigate = useNavigate();
+    const location = useLocation();
+    const currentPath = location.pathname;
 
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
@@ -43,26 +45,53 @@ const Navbar = () => {
                 <div className={`menu ${menuVisible ? 'spread' : ''}`}>
                     <ul className='menu-items'>
                         <li>
-                            <Link to="/news" style={{ textDecoration: 'none', color: 'white' }} onClick={toggleMenu}>News</Link>
+                            <Link 
+                                to="/news" 
+                                style={{ textDecoration: 'none', color: 'white' }} 
+                                className={currentPath === '/news' ? 'active' : ''}
+                                onClick={toggleMenu}
+                            >
+                                News
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/parks" style={{ textDecoration: 'none', color: 'white' }} onClick={toggleMenu}>Parks</Link>
+                            <Link 
+                                to="/parks" 
+                                style={{ textDecoration: 'none', color: 'white' }} 
+                                className={currentPath === '/parks' ? 'active' : ''}
+                                onClick={toggleMenu}
+                            >
+                                Parks
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/places" style={{ textDecoration: 'none', color: 'white' }} onClick={toggleMenu}>Places</Link>
+                            <Link 
+                                to="/places" 
+                                style={{ textDecoration: 'none', color: 'white' }} 
+                                className={currentPath === '/places' ? 'active' : ''}
+                                onClick={toggleMenu}
+                            >
+                                Places
+                            </Link>
                         </li>
                     </ul>
                 </div>
             </div>
             <div className={`nav-items ${NavVisible ? 'show' : ''}`}>
-                <Link to='/CityOne' className="nav-item">
+                <Link 
+                    to='/CityOne' 
+                    className={`nav-item ${currentPath === '/CityOne' ? 'active' : ''}`}
+                >
                     <div style={{ textDecoration: 'none', color: 'white' }}>Home</div>
                 </Link>
-                <Link to='/community' className="nav-item">
+                <Link 
+                    to='/community' 
+                    className={`nav-item ${currentPath === '/community' ? 'active' : ''}`}
+                >
                     <div style={{ textDecoration: 'none', color: 'white' }}>Community</div>
                 </Link>
                 <div 
-                    className="nav-item" 
+                    className={`nav-item ${currentPath.startsWith('/services') ? 'active' : ''}`} 
                     onMouseEnter={showServices} 
                     onMouseLeave={hideServices}
                 >
@@ -70,31 +99,56 @@ const Navbar = () => {
                     <div className={`dropdown ${servicesVisible ? 'show' : ''}`}>
                         <ul className='dropdown-items'>
                             <li>
-                                <Link to='/education' style={{ textDecoration: 'none' }} onClick={() => setMenu("education")}>
+                                <Link 
+                                    to='/education' 
+                                    style={{ textDecoration: 'none' }} 
+                                    className={currentPath === '/education' ? 'active' : ''}
+                                    onClick={() => setMenu("education")}
+                                >
                                     Education
                                 </Link>
                                 {menu === "education" ? <hr /> : null}
                             </li>
                             <li>
-                                <Link to='/hospital' style={{ textDecoration: 'none' }} onClick={() => setMenu("hospital")}>
+                                <Link 
+                                    to='/hospital' 
+                                    style={{ textDecoration: 'none' }} 
+                                    className={currentPath === '/hospital' ? 'active' : ''}
+                                    onClick={() => setMenu("hospital")}
+                                >
                                     Hospitals
                                 </Link>
                                 {menu === "hospital" ? <hr /> : null}
                             </li>
                             <li>
-                                <Link to='/clinics' style={{ textDecoration: 'none' }} onClick={() => setMenu("clinics")}>
+                                <Link 
+                                    to='/clinics' 
+                                    style={{ textDecoration: 'none' }} 
+                                    className={currentPath === '/clinics' ? 'active' : ''}
+                                    onClick={() => setMenu("clinics")}
+                                >
                                     Clinics
                                 </Link>
                                 {menu === "clinics" ? <hr /> : null}
                             </li>
                             <li>
-                                <Link to='/police' style={{ textDecoration: 'none' }} onClick={() => setMenu("police")}>
+                                <Link 
+                                    to='/police' 
+                                    style={{ textDecoration: 'none' }} 
+                                    className={currentPath === '/police' ? 'active' : ''}
+                                    onClick={() => setMenu("police")}
+                                >
                                     Police Station
                                 </Link>
                                 {menu === "police" ? <hr /> : null}
                             </li>
                             <li>
-                                <Link to='/transport' style={{ textDecoration: 'none' }} onClick={() => setMenu("transport")}>
+                                <Link 
+                                    to='/transport' 
+                                    style={{ textDecoration: 'none' }} 
+                                    className={currentPath === '/transport' ? 'active' : ''}
+                                    onClick={() => setMenu("transport")}
+                                >
                                     Transportation
                                 </Link>
                                 {menu === "transport" ? <hr /> : null}
@@ -102,13 +156,22 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-                <Link to='/businesses' className="nav-item">
+                <Link 
+                    to='/businesses' 
+                    className={`nav-item ${currentPath === '/businesses' ? 'active' : ''}`}
+                >
                     <div style={{ textDecoration: 'none', color: 'white' }}>Businesses</div>
                 </Link>
-                <Link to='/about' className="nav-item">
+                <Link 
+                    to='/about' 
+                    className={`nav-item ${currentPath === '/about' ? 'active' : ''}`}
+                >
                     <div style={{ textDecoration: 'none', color: 'white' }}>About us</div>
                 </Link>
-                <Link to='/contact' className="nav-item">
+                <Link 
+                    to='/contact' 
+                    className={`nav-item ${currentPath === '/contact' ? 'active' : ''}`}
+                >
                     <div style={{ textDecoration: 'none', color: 'white' }}>Contact Us</div>
                 </Link>
             </div>
@@ -121,7 +184,9 @@ const Navbar = () => {
                 />
                 <button onClick={handleSearch}>Search</button>
             </div>
-            <div className="burger" onClick={toggleNav}><img src={burger} alt="icon" /></div>
+            <div className="burger" onClick={toggleNav}>
+                <img src={burger} alt="icon" />
+            </div>
         </div>
     );
 };

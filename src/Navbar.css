@@ -90,6 +90,12 @@
 .nav-item:hover {
     background-color: rgba(0, 0, 0, 0.764);
 }
+.nav-item:active {
+    background-color: rgba(188, 185, 185, 0.764);
+}
+.nav-item.active, .menu-items .active {
+    background-color: #0000006c; 
+    }
 
 .search {
     display: flex;

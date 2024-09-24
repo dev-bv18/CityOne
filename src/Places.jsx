@@ -26,7 +26,7 @@ const Places = () => {
     // Function to fetch places data
     const fetchPlaces = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/places'); // Replace with your server URL
+        const response = await axios.get('http://localhost:4000/places'); 
         setPlaces(response.data);
         setLoading(false);
       } catch (error) {
