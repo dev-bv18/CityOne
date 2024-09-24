@@ -17,12 +17,10 @@ const ContactUs = () => {
 
     const contact = async () => {
         try {
-            setIsLoading(true); // Set loading state to true
-            const updatedMessage = `${formData.message}`;
-            const updatedFormData = { ...formData, message: updatedMessage };
-
-            console.log("Contacting", updatedFormData);
-
+            setIsLoading(true);
+            const updatedFormData = { ...formData, message: formData.message };
+            console.log("Sending Request:", updatedFormData);
+    
             const response = await fetch('https://cityone-backend.onrender.com/contact', {
                 method: 'POST',
                 headers: {
@@ -31,19 +29,20 @@ const ContactUs = () => {
                 },
                 body: JSON.stringify(updatedFormData),
             });
-
+    
+            console.log("Response Status:", response.status);
             const responseData = await response.json();
-
+            console.log("Response Data:", responseData);
+    
             if (response.ok && responseData.success) {
                 setFormStatus("Message sent successfully!");
-                alert("Message sent!!");
-                // Redirect or reset form after success
+                alert("Message sent!");
                 setFormData({
                     name: "",
                     email: "",
                     message: ""
                 });
-                window.location.replace("/CityOne"); // Redirect if needed
+                window.location.replace("/CityOne");
             } else {
                 setFormStatus(`Error: ${responseData.message}`);
             }
@@ -51,9 +50,10 @@ const ContactUs = () => {
             console.error("Error submitting contact form:", error);
             setFormStatus("Failed to submit contact form. Please try again later.");
         } finally {
-            setIsLoading(false); // Reset loading state
+            setIsLoading(false);
         }
     };
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent default form submission
