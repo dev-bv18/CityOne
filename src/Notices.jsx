@@ -6,7 +6,7 @@ const Notices = () => {
   const [notices, setNotices] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/allnotices')
+    fetch('https://cityone-frontend1.onrender.com/allnotices')
       .then((response) => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
