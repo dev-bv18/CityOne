@@ -15,17 +15,19 @@
 }
 
 .notice h3 {
-    color: rgb(88, 1, 1);
-    font-weight: 500; /* Adjusted weight */
+    color: rgb(68, 61, 67);
+    text-transform: uppercase;
+    font-weight: 900; 
+    /* Adjusted weight */
     margin: 0 0 10px 0; /* Margin for spacing */
 }
-.new-label{
+.notice .new-label{
     color: white;
     background: linear-gradient(red,maroon);
     z-index:1;
-    left: -60px;
+    left: 150px;
     border-radius: 20px;
-    font-size: 15px;
+    font-size: 10px;
     padding: 7px;
     top: -10px;
     position: relative;

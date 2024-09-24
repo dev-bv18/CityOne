@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import LoadingScreen from './LoadingScreen';
 import './Places.css';
+import './Business.css';
 import noimage from './noimage.jpg';
 
 const Business = () => {
