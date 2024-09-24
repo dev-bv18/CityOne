@@ -15,7 +15,7 @@ const ContactUs = () => {
             const updatedMessage = `${formData.message}`;
             const updatedFormData = { ...formData, message: updatedMessage };
             console.log("Contacting", updatedFormData);
-            const response = await fetch('http://localhost:4000/contact', {
+            const response = await fetch('https://cityone-backend.onrender.com/contact', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',

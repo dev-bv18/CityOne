@@ -13,7 +13,7 @@ const Parks = () => {
     // Function to fetch parks data
     const fetchParks = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/parks'); // Replace with your server URL
+        const response = await axios.get('https://cityone-backend.onrender.com/parks'); // Replace with your server URL
         // Filter out parks that are permanently closed
         const filteredParks = response.data.filter(park => !park.permanently_closed);
         setParks(filteredParks);

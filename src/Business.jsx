@@ -14,7 +14,7 @@ const Business = () => {
     // Function to fetch places data
     const fetchBusiness = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/businesses'); // Replace with your server URL
+        const response = await axios.get('https://cityone-backend.onrender.com/businesses'); // Replace with your server URL
         // Filter out parks and keep other tourist places
         const filteredBusiness = response.data.filter(place => place.types && !place.types.includes('businesses'));
         setBusiness(filteredBusiness);

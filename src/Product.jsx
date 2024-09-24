@@ -11,7 +11,7 @@ const Product = () => {
   useEffect(() => {
     const fetchNotice = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/notice/${id}`);
+        const response = await fetch(`https://cityone-backend.onrender.com/notice/${id}`);
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         setNotice(data);
